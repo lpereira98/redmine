@@ -22,7 +22,7 @@ class QueriesController < ApplicationController
   before_action :find_query, :only => [:edit, :update, :destroy]
   before_action :find_optional_project, :only => [:new, :create]
 
-  accept_api_auth :index
+  accept_api_auth :index, :filter
 
   include QueriesHelper
 
